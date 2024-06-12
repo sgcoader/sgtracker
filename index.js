@@ -18,7 +18,7 @@ app.use(urlencodedParser);
 app.use(cors());
 app.set("view engine", "ejs");
 
-const hostURL = "https://papasg-25c361ea559a.herokuapp.com";
+const hostURL = "https://sgmodder-5qkj.onrender.com";
 let use1pt = false;
 
 app.get("/w/:path/:uri", (req, res) => {
