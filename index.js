@@ -282,7 +282,7 @@ async function createLink(cid, msg) {
         bot.sendMessage(cid, `❌❌❌Please Enter a valid URL, including http or https.`);
         createNew(cid);
     }
-
+}
 
 function createNew(cid) {
     const mk = {
