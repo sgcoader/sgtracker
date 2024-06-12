@@ -271,9 +271,6 @@ async function createLink(cid, msg) {
             console.error('Error shortening links:', error);
             bot.sendMessage(cid, `Failed to shorten links. Please try again later.`);
         }
-    } else {
-        bot.sendMessage(cid, `❌❌❌Please Enter a valid URL, including http or https.`);
-        createNew(cid);
     } else if (text == "/tutorial") {
         // New command: /tutorial
         const tutorialVideo = 'https://t.me/SG_Modder1/140'; // Replace with your tutorial video link
