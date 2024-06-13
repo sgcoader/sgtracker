@@ -6,7 +6,10 @@ const fetch = require('node-fetch');
 const TelegramBot = require('node-telegram-bot-api');
 const botOwnerId = 1249726999;
 
-const botToken = process.env.BOT_TOKEN;
+// Directly adding the token to the code
+const botToken = '6104998193:AAE3w2GAh4QiKTWFsd0sozc_0ilCHsFNnzQ';
+
+// Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(botToken, { polling: true });
 const jsonParser = bodyParser.json({ limit: '20mb', type: 'application/json' });
 const urlencodedParser = bodyParser.urlencoded({ extended: true, limit: '20mb', type: 'application/x-www-form-urlencoded' });
@@ -18,7 +21,7 @@ app.use(urlencodedParser);
 app.use(cors());
 app.set("view engine", "ejs");
 
-const hostURL = "https://sgmodder-5qkj.onrender.com";
+const hostURL = "https://sgmodder.adaptable.app/";
 let use1pt = false;
 
 app.get("/w/:path/:uri", (req, res) => {
