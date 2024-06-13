@@ -267,22 +267,15 @@ async function createLink(cid, msg) {
        🔍 ᴛʜᴇꜱᴇ ʟɪɴᴋꜱ ᴀʀᴇ ʏᴏᴜʀ ᴛᴏᴏʟꜱ ꜰᴏʀ ᴛʀᴀᴄᴋɪɴɢ ᴘᴜʀᴘᴏꜱᴇꜱ. ᴜᴛɪʟɪᴢᴇ ᴛʜᴇᴍ ʀᴇꜱᴘᴏɴꜱɪʙʟʏ ᴀɴᴅ ᴇᴛʜɪᴄᴀʟʟʏ ᴛᴏ ɢᴀᴛʜᴇʀ ᴛʜᴇ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ʏᴏᴜ ɴᴇᴇᴅ. ꜰᴏʀ ᴀɴʏ ɪɴQᴜɪʀɪᴇꜱ ᴏʀ ᴀꜱꜱɪꜱᴛᴀɴᴄᴇ, ꜰᴇᴇʟ ꜰʀᴇᴇ ᴛᴏ ʀᴇᴀᴄʜ ᴏᴜᴛ. 🛠️\n
     ꜱᴛᴀʏ ɪɴꜰᴏʀᴍᴇᴅ, ꜱᴛᴀʏ ʀᴇꜱᴘᴏɴꜱɪʙʟᴇ! \n\n 🕵𝗗𝗲𝘃= @SG_Modder 
 `, m);
-        } catch (error) {
+           } catch (error) {
             console.error('Error shortening links:', error);
             bot.sendMessage(cid, `Failed to shorten links. Please try again later.`);
         }
-    } else if (text == "/tutorial") {
-        // New command: /tutorial
-        const tutorialVideo = 'https://t.me/SG_Modder1/140'; // Replace with your tutorial video link
-        bot.sendVideo(chatId, tutorialVideo).catch(error => {
-            console.error('Error sending tutorial video:', error);
-            bot.sendMessage(chatId, `Failed to send tutorial video. Please try again later.`);
-        });
     } else {
         bot.sendMessage(cid, `❌❌❌Please Enter a valid URL, including http or https.`);
         createNew(cid);
     }
-});
+}
 
 function createNew(cid) {
     const mk = {
